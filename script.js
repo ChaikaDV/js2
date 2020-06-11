@@ -74,3 +74,26 @@ function addingRow () {
         alert('Ошибка! Необходимо все поля заполнить корректными значениями!');
     }
 }
+
+SeriesTable.addEventListener('click', (e) => {
+
+    if (e.target.tagName === 'TH') {
+        let currentIndex = e.target.cellIndex;
+        sortingTable(currentIndex, e.target.getAttribute('data-type'), selectedColumn === currentIndex);
+        if (selectedColumn === currentIndex){
+            selectedColumn = -1;
+        }
+        else {
+            selectedColumn = currentIndex;
+        }
+    }
+    if (e.target.tagName === 'IMG') {
+        let rowIndex = e.target.closest('TR').rowIndex;
+        SeriesTable.deleteRow(rowIndex);
+    }
+});
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addingRow();
+});
