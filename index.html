@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <script defer type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href = style.css>
+    <title>Super Series Table</title>
+</head>
+<body>
+<table id="TableOfSeries">
+    <thead>
+    <tr>
+        <th data-type = "text">Название сериала</th>
+        <th data-type = "integer">Год выхода</th>
+        <th data-type = "integer">Количество сезонов</th>
+        <th data-type = "integer">Количество серий</th>
+        <th data-type = "integer">Продолжительность серии в среднем</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Игра престолов</td>
+        <td>2011</td>
+        <td>8</td>
+        <td>73</td>
+        <td>60</td>
+        <td><button><img src="TrashBin.png" alt="Удалить"></button></td>
+    </tr>
+    <tr>
+        <td>Очень странные дела</td>
+        <td>2016</td>
+        <td>3</td>
+        <td>25</td>
+        <td>59</td>
+        <td><button><img src="TrashBin.png" alt="Удалить"></button></td>
+    </tr>
+    <tr>
+        <td>Настоящий детектив</td>
+        <td>2014</td>
+        <td>3</td>
+        <td>24</td>
+        <td>57</td>
+        <td><button><img src="TrashBin.png" alt="Удалить"></button></td>
+    </tr>
+    <tr>
+        <td>Сверхъестественное</td>
+        <td>2005</td>
+        <td>14</td>
+        <td>320</td>
+        <td>43</td>
+        <td><button><img src="TrashBin.png" alt="Удалить"></button></td>
+    </tr>
+    </tbody>
+</table>
+<form id="AddSeries">
+    <label for="inputSeries">Название сериала</label>
+    <input id="inputSeries" type="text">
+    <label for="inputDate">Год выхода</label>
+    <input id="inputDate" type="text">
+    <label for="inputSeasonCount">Количество сезонов</label>
+    <input id="inputSeasonCount" type="text">
+    <label for="inputSeriesCount">Количество серий</label>
+    <input id="inputSeriesCount" type="text">
+    <label for="inputTime">Продолжительность серии в среднем</label>
+    <input id="inputTime" type="text">
+    <input type="submit" value="Добавить">
+</form>
+</body>
+</html>
